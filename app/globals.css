@@ -1,6 +1,20 @@
-body {
-  margin: 0;
-  background: #F7F0E6;
-  color: #2F2A24;
-  font-family: Arial, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+body{margin:0;background:#F7F0E6;color:#2F2A24;font-family:Inter,sans-serif}
+.site-shell{overflow-x:hidden}.text-olive{color:#57624b}.text-cocoa{color:#2F2A24}.bg-cream{background:#f8f1e7}
+.logo{font:700 2rem/1 "Cormorant Garamond",serif;letter-spacing:.06em}.nav-wrap{position:fixed;top:0;z-index:50;width:100%;transition:.3s;background:transparent}.nav-scrolled{background:rgba(247,240,230,.75);backdrop-filter:blur(10px);border-bottom:1px solid rgba(47,42,36,.08)}
+.nav-wrap a{color:#2F2A24;text-decoration:none;transition:.2s}.nav-wrap a:hover{opacity:.65}.hamburger{border:1px solid #d5cab8;background:#fff8f1;padding:.45rem .7rem;border-radius:.6rem}.mobile-menu{display:grid;gap:.75rem;padding:0 1.5rem 1rem;background:rgba(247,240,230,.95)}
+.hero{position:relative;isolation:isolate;background:radial-gradient(circle at 10% 15%,#e8d2bb,transparent 35%),linear-gradient(135deg,#F7F0E6,#fff)}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.03) 1px,transparent 1px);background-size:3px 3px;opacity:.15;z-index:-1}
+.blob{position:absolute;border-radius:999px;filter:blur(4px);opacity:.45;animation:float 10s ease-in-out infinite}.blob-1{width:220px;height:220px;left:-3rem;top:6rem;background:#d6b89b}.blob-2{width:170px;height:170px;right:8%;top:18%;background:#c7d3bf;animation-delay:2s}.blob-3{width:140px;height:140px;right:22%;bottom:14%;background:#e8dccd;animation-delay:4s}
+.pill{display:inline-flex;padding:.55rem 1rem;border-radius:999px;background:rgba(255,255,255,.65);backdrop-filter:blur(6px);box-shadow:0 8px 25px rgba(0,0,0,.06)}
+.hero-title,.section-title{font-family:"Cormorant Garamond",serif;line-height:1.05;letter-spacing:.01em}.hero-title{font-size:clamp(2.3rem,5.8vw,5.2rem);margin:.9rem 0}.hero-copy,.section-copy{font-size:1.1rem;line-height:1.9;color:rgba(47,42,36,.84);max-width:44rem}
+.glass-card{padding:1rem;border-radius:2rem;background:rgba(255,255,255,.45);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.6);box-shadow:0 20px 70px rgba(77,60,40,.18)}.hero-image-frame{height:520px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-radius:1.5rem;background:linear-gradient(145deg,rgba(214,198,177,.6),rgba(255,255,255,.8))}
+.reserve-btn{border-radius:999px;background:#57624b;color:white;padding:.8rem 1.4rem;font-weight:600;box-shadow:0 10px 30px rgba(87,98,75,.35);text-decoration:none;transition:.25s}.reserve-btn:hover{transform:translateY(-2px)}.ghost-btn{border-radius:999px;border:1px solid #57624b;color:#57624b;padding:.8rem 1.4rem;text-decoration:none}
+.menu-card{border-radius:1.4rem;background:linear-gradient(170deg,#fff,#f8f1e7);padding:1.4rem;box-shadow:0 10px 26px rgba(45,35,26,.07);transition:.25s;animation:fade .6s ease both}.menu-card:hover{transform:translateY(-8px)}
+.community{background:linear-gradient(145deg,#516044,#33402b)}.life-card{min-height:160px;padding:1.2rem;border-radius:1.1rem;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);display:flex;flex-direction:column;justify-content:space-between;font-weight:600}.life-card span{opacity:.75;font-weight:400}.stat-card{border-radius:1rem;background:rgba(255,255,255,.14);padding:1rem;animation:pulse 2.6s ease-in-out infinite}
+.masonry{columns:1;gap:1rem}.gallery-item{break-inside:avoid;margin-bottom:1rem;min-height:180px;border-radius:1.2rem;background:linear-gradient(140deg,#f0dfcb,#efe8db);padding:1rem;display:flex;flex-direction:column;justify-content:space-between;font-weight:600;transition:.25s}.gallery-item:nth-child(2n){min-height:250px}.gallery-item:nth-child(3n){min-height:210px}.gallery-item:hover{transform:scale(1.02)}.gallery-item span{font-size:.9rem;opacity:.65}
+.social{display:inline-flex;align-items:center;justify-content:center;width:2.2rem;height:2.2rem;border-radius:999px;border:1px solid #bcae99}
+.fade-up{animation:fade .8s ease both}.delay-2{animation-delay:.18s}
+@keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@keyframes float{50%{transform:translateY(-16px) translateX(10px)}}@keyframes pulse{50%{transform:translateY(-2px)}}
+@media (min-width:768px){.masonry{columns:3}}
+@media (max-width:767px){.hero{padding-top:1rem}.hero-image-frame{height:370px}.hero-copy,.section-copy{font-size:1rem;line-height:1.7}.section-title{font-size:2.2rem}.nav-wrap .reserve-btn{display:none}}
