@@ -1,6 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
 body {
   margin: 0;
-  background: #F7F0E6;
-  color: #2F2A24;
-  font-family: Arial, sans-serif;
+  background: #f7f0e6;
+  color: #2f2a24;
+  font-family: "Inter", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.font-serif {
+  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  letter-spacing: -0.01em;
+}
+
+.site-container {
+  width: min(1120px, calc(100% - 2.25rem));
+  margin-inline: auto;
+}
+
+.section-pad {
+  padding-block: clamp(4.5rem, 8vw, 7rem);
+}
+
+.hero-section {
+  background: radial-gradient(circle at top left, rgba(216, 195, 165, 0.5), transparent 35%), linear-gradient(135deg, #f7f0e6, #fffdf9 55%, #f3ece3);
+}
+
+.grain-bg {
+  position: relative;
+}
+
+.grain-bg::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0.12;
+  z-index: -1;
+  background-image: radial-gradient(rgba(76, 59, 42, 0.18) 0.4px, transparent 0.4px);
+  background-size: 3px 3px;
 }
