@@ -1,106 +1,155 @@
-import { Leaf, Coffee, Heart, MapPin, MessageCircle } from "lucide-react";
+import { Leaf, Coffee, Heart, MapPin, MessageCircle, Sparkles } from "lucide-react";
 
 const menu = [
-  ["All-Day Breakfast", "Fresh toast, eggs, chia pudding, almond oatmeal and avocado dishes."],
-  ["Salads & Bowls", "Colorful bowls, fresh vegetables, grains, proteins and homemade dressings."],
-  ["Healthy Mains", "Balanced warm meals with chicken, beef, fish, vegetables and signature sauces."],
-  ["Matcha & Coffee", "Signature lattes, matcha drinks, infusions and wellness beverages."]
+  {
+    title: "All-Day Breakfast",
+    desc: "Fresh toast, eggs, chia pudding, almond oatmeal and avocado dishes.",
+  },
+  {
+    title: "Salads & Bowls",
+    desc: "Colorful bowls, fresh vegetables, grains, proteins and homemade dressings.",
+  },
+  {
+    title: "Healthy Mains",
+    desc: "Balanced warm meals with fish, chicken, vegetables and signature sauces.",
+  },
+  {
+    title: "Matcha & Coffee",
+    desc: "Signature lattes, ceremonial matcha, espresso and wellness infusions.",
+  },
 ];
 
-const gallery = ["Fresh Bowls", "Matcha Bar", "Artisan Bakery", "Warm Interior", "Healthy Mains", "Community Moments"];
+const gallery = [
+  "Mediterranean Bowls",
+  "Matcha Ritual Bar",
+  "Artisan Bakery",
+  "Warm Interior",
+  "Healthy Mains",
+  "Community Brunch",
+];
 
 export default function Home() {
   return (
-    <main>
-      <nav className="fixed top-0 z-50 w-full bg-cream/90 backdrop-blur border-b border-cocoa/10">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="text-2xl font-semibold tracking-wide text-olive">Pioppi</div>
-          <div className="hidden gap-8 text-sm font-medium md:flex">
-            <a href="#about">About</a><a href="#menu">Menu</a><a href="#nutrition">Nutrition</a><a href="#community">Community</a><a href="#contact">Contact</a>
+    <main className="site-main">
+      <nav className="navbar">
+        <div className="container navbar-inner">
+          <a href="#home" className="brand" aria-label="Pioppi home">
+            Pioppi
+          </a>
+          <div className="nav-links">
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#rituals">Rituals</a>
+            <a href="#community">Community</a>
+            <a href="#contact">Contact</a>
           </div>
-          <a href="https://wa.me/243000000000" className="rounded-full bg-olive px-5 py-2 text-sm font-semibold text-white">WhatsApp</a>
+          <a href="https://wa.me/243000000000" className="nav-cta">
+            Reserve
+          </a>
         </div>
       </nav>
 
-      <section className="min-h-screen bg-[radial-gradient(circle_at_top_left,#D8C3A5,transparent_35%),linear-gradient(135deg,#F7F0E6,#fff)] pt-32">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2">
-          <div>
-            <p className="mb-4 inline-flex rounded-full bg-white px-4 py-2 text-sm font-medium text-olive shadow-sm">Healthy lifestyle restaurant — Gombe, Kinshasa</p>
-            <h1 className="text-5xl font-bold leading-tight text-cocoa md:text-7xl">Eat Better. Live Better. Gather Better.</h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-cocoa/80">Pioppi is a premium healthy restaurant and lifestyle space where fresh food, signature drinks, artisan bakery and community meet in the heart of Kinshasa.</p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#menu" className="rounded-full bg-olive px-7 py-3 font-semibold text-white">Discover Menu</a>
-              <a href="#contact" className="rounded-full border border-olive px-7 py-3 font-semibold text-olive">Visit Us</a>
+      <section id="home" className="hero">
+        <div className="container hero-grid">
+          <div className="fade-up delay-1">
+            <p className="eyebrow">Luxury healthy lifestyle restaurant · Gombe, Kinshasa</p>
+            <h1>Eat Better. Live Better. Gather Better.</h1>
+            <p className="hero-sub">
+              Mediterranean wellness meets modern Kinshasa with soft Lebanese coastal elegance. Pioppi brings refined nourishment,
+              beautiful atmosphere, and community energy together.
+            </p>
+            <div className="hero-actions">
+              <a href="#menu" className="btn btn-primary">
+                Discover Menu
+              </a>
+              <a href="#contact" className="btn btn-secondary">
+                Visit Us
+              </a>
             </div>
           </div>
-          <div className="rounded-[2rem] bg-white p-6 shadow-2xl">
-            <div className="flex h-[520px] items-center justify-center rounded-[1.5rem] bg-gradient-to-br from-sage/40 to-sand/50 text-center">
-              <div>
-                <Leaf className="mx-auto mb-6 h-16 w-16 text-olive" />
-                <p className="text-3xl font-semibold text-cocoa">Fresh • Balanced • Beautiful</p>
-                <p className="mt-3 text-cocoa/70">Replace this area with Pioppi hero food/interior image.</p>
-              </div>
-            </div>
+
+          <div className="hero-card fade-up delay-2">
+            <Leaf size={52} />
+            <p className="hero-card-title">Fresh • Balanced • Beautiful</p>
+            <p>Premium ingredients, intentional nutrition and vibrant flavors crafted daily.</p>
           </div>
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-6xl px-6 py-24">
-        <h2 className="text-4xl font-bold text-cocoa">Who We Are</h2>
-        <p className="mt-6 text-xl leading-9 text-cocoa/80">Pioppi is more than a restaurant. It is a new way of gathering around food, wellness and community. Born in Kinshasa, Pioppi was created to make healthy eating more enjoyable, accessible and inspiring.</p>
+      <section id="about" className="section container fade-up">
+        <h2>Who We Are</h2>
+        <p>
+          Pioppi is more than a restaurant. It is a lifestyle destination where food, wellness and social connection are designed into every
+          detail.
+        </p>
       </section>
 
-      <section id="menu" className="bg-white py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-4xl font-bold text-cocoa">Our Menu</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-4">
-            {menu.map(([title, desc]) => (
-              <div key={title} className="rounded-3xl bg-cream p-6 shadow-sm">
-                <Coffee className="mb-4 h-8 w-8 text-olive" />
-                <h3 className="text-xl font-semibold text-cocoa">{title}</h3>
-                <p className="mt-3 text-cocoa/70">{desc}</p>
-              </div>
+      <section id="menu" className="section section-soft">
+        <div className="container">
+          <h2 className="fade-up">Premium Menu Preview</h2>
+          <div className="card-grid">
+            {menu.map((item, i) => (
+              <article key={item.title} className={`menu-card fade-up delay-${(i % 3) + 1}`}>
+                <Coffee size={24} />
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="nutrition" className="mx-auto grid max-w-7xl gap-10 px-6 py-24 md:grid-cols-2">
-        <div>
-          <h2 className="text-4xl font-bold text-cocoa">Food With Intention</h2>
-          <p className="mt-6 text-lg leading-8 text-cocoa/80">We design recipes with balance in mind: quality proteins, fresh vegetables, natural flavors, thoughtful portions and better ingredients.</p>
+      <section id="rituals" className="section container ritual-grid">
+        <div className="fade-up">
+          <h2>Matcha & Coffee Rituals</h2>
+          <p>
+            From ceremonial matcha to slow-crafted espresso, our beverage experience is designed for mindful mornings and creative afternoons.
+          </p>
         </div>
-        <div className="rounded-3xl bg-white p-8 shadow-sm">
-          {["Fresh ingredients", "Balanced meals", "Clear nutrition information", "Delicious first, healthy always"].map(x => (
-            <p key={x} className="mb-4 flex items-center gap-3 text-lg text-cocoa"><Heart className="h-5 w-5 text-olive" />{x}</p>
+        <div className="feature-card fade-up delay-2">
+          <p><Heart size={18} /> Functional blends with clean ingredients</p>
+          <p><Sparkles size={18} /> Signature matcha latte artistry</p>
+          <p><Coffee size={18} /> Specialty coffee with elegant pairings</p>
+          <p><Leaf size={18} /> Wellness-forward seasonal menu</p>
+        </div>
+      </section>
+
+      <section id="community" className="section community">
+        <div className="container fade-up">
+          <h2>Community Lifestyle</h2>
+          <p>
+            Pioppi is a social wellness hub for brunches, tastings, workshops, and meaningful moments centered around healthier living.
+          </p>
+        </div>
+      </section>
+
+      <section className="section container">
+        <h2 className="fade-up">Gallery Preview</h2>
+        <div className="gallery-grid">
+          {gallery.map((item, i) => (
+            <div key={item} className={`gallery-tile fade-up delay-${(i % 3) + 1}`}>
+              {item}
+            </div>
           ))}
         </div>
       </section>
 
-      <section id="community" className="bg-olive py-24 text-white">
-        <div className="mx-auto max-w-6xl px-6 text-center">
-          <h2 className="text-4xl font-bold">A Place to Gather</h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/85">Pioppi is designed as a community space where people can meet, work, eat, learn and share better habits through wellness mornings, matcha tastings, family brunches and healthy workshops.</p>
+      <section id="contact" className="section section-soft contact">
+        <div className="container fade-up">
+          <MapPin size={34} />
+          <h2>Visit Pioppi</h2>
+          <p>Gombe, Kinshasa — opening details coming soon.</p>
+          <a href="https://wa.me/243000000000" className="btn btn-primary contact-btn">
+            <MessageCircle size={20} /> Contact on WhatsApp
+          </a>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <h2 className="text-4xl font-bold text-cocoa">Gallery Preview</h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {gallery.map(item => <div key={item} className="flex h-52 items-center justify-center rounded-3xl bg-sand/50 font-semibold text-cocoa">{item}</div>)}
-        </div>
-      </section>
+      <a href="https://wa.me/243000000000" className="whatsapp-sticky" aria-label="Chat on WhatsApp">
+        <MessageCircle size={18} /> WhatsApp
+      </a>
 
-      <section id="contact" className="bg-white py-24">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <MapPin className="mx-auto mb-5 h-10 w-10 text-olive" />
-          <h2 className="text-4xl font-bold text-cocoa">Visit Pioppi</h2>
-          <p className="mt-4 text-lg text-cocoa/75">Gombe, Kinshasa — opening details coming soon.</p>
-          <a href="https://wa.me/243000000000" className="mt-8 inline-flex items-center gap-2 rounded-full bg-olive px-8 py-4 font-semibold text-white"><MessageCircle /> Contact on WhatsApp</a>
-        </div>
-      </section>
-
-      <footer className="bg-cocoa px-6 py-10 text-center text-white">© 2026 Pioppi. Eat Better. Live Better. Gather Better.</footer>
+      <footer className="footer">© 2026 Pioppi. Eat Better. Live Better. Gather Better.</footer>
     </main>
   );
 }
