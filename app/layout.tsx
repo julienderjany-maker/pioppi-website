@@ -61,7 +61,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FAF6F0",
+  themeColor: "#171D12",
 };
 
 const restaurantSchema = {
