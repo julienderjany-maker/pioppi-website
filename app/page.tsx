@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { MapPin, MessageCircle, ArrowRight, Menu, X } from "lucide-react";
 
 /* ─── Icons (brand icons removed from lucide-react) ────────────────── */
@@ -245,19 +244,16 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right — hero photo */}
-          <div className="relative h-72 overflow-hidden sm:h-96 md:h-auto">
-            <Image
-              src="/hero-boulevard.png"
-              alt="Pioppi restaurant terrace on the boulevard in Gombe, Kinshasa"
-              fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
-              priority
-            />
+          {/* Right — replace the inner div with a Next.js <Image> when ready */}
+          <div className="relative hidden overflow-hidden bg-gradient-to-br from-matcha via-olive-pale to-olive-light md:flex">
+            <div className="flex h-full w-full items-center justify-center text-center">
+              <p className="font-serif text-xl italic text-white/70 leading-loose">
+                Your hero food<br />photography here
+              </p>
+            </div>
 
             {/* Floating badge */}
-            <div className="absolute bottom-6 left-6 rounded-2xl bg-white px-5 py-4 shadow-lg md:bottom-10 md:left-10">
+            <div className="absolute bottom-10 left-10 rounded-2xl bg-white px-5 py-4 shadow-lg">
               <p className="font-serif text-3xl font-bold text-olive">100%</p>
               <p className="mt-1 text-xs text-cocoa/50 leading-5">
                 Fresh ingredients<br />every day
