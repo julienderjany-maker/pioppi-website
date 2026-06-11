@@ -29,6 +29,12 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* giant outlined wordmark in the footer */
+.text-outline-cream {
+  -webkit-text-stroke: 2px rgba(250, 246, 240, 0.22);
+  color: transparent;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
