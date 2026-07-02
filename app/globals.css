@@ -17,11 +17,13 @@ body {
   color: #faf6f0;
 }
 
-/* visible focus ring for keyboard users only */
+/* visible focus ring for keyboard users only — two-tone so it clears 3:1
+   on both cream and ink backgrounds */
 :focus-visible {
-  outline: 2px solid #c9a86a;
+  outline: 2px solid #5c6b3a;
   outline-offset: 3px;
   border-radius: 2px;
+  box-shadow: 0 0 0 5px rgba(236, 220, 176, 0.9);
 }
 
 @keyframes fadeUp {
@@ -83,6 +85,7 @@ body {
   *::after {
     animation-duration: 0.01ms !important;
     animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important; /* stop infinite loops flickering */
     transition-duration: 0.01ms !important;
   }
 }

@@ -21,6 +21,7 @@ const config: Config = {
         gold:    "#C9A86A",
         "gold-light": "#ECDCB0",
         bronze:  "#9A7B3F",
+        "bronze-dark": "#7D6332",
       },
       fontFamily: {
         sans:  ["var(--font-inter)", "sans-serif"],

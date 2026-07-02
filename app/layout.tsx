@@ -22,13 +22,16 @@ export const metadata: Metadata = {
     template: "%s | Pioppi",
   },
   description:
-    "Pioppi is a premium healthy lifestyle restaurant in Gombe, Kinshasa — fresh food, signature drinks, artisan bakery and community.",
+    "Pioppi — paradis de santé in Gombe, Kinshasa. A premium healthy lifestyle restaurant: fresh food, signature drinks, artisan bakery and community. Restaurant santé au cœur de Kinshasa.",
   keywords: [
     "healthy restaurant Kinshasa",
     "restaurant Gombe",
     "matcha Kinshasa",
     "healthy food Kinshasa",
     "brunch Kinshasa",
+    "restaurant santé Kinshasa",
+    "manger sain Kinshasa",
+    "restaurant santé Gombe",
     "Pioppi",
   ],
   alternates: {
@@ -41,13 +44,14 @@ export const metadata: Metadata = {
     url: "https://pioppi.cafe",
     siteName: "Pioppi",
     locale: "en_US",
+    alternateLocale: ["fr_CD"],
     type: "website",
     images: [
       {
-        url: "/hero-boulevard.png",
-        width: 1173,
-        height: 1341,
-        alt: "Pioppi — healthy restaurant on the boulevard in Gombe, Kinshasa",
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Inside Pioppi — the warm olive-and-cream dining room in Gombe, Kinshasa",
       },
     ],
   },
@@ -56,7 +60,7 @@ export const metadata: Metadata = {
     title: "Pioppi | Healthy Restaurant in Kinshasa",
     description:
       "Eat Better. Live Better. Gather Better. Premium healthy dining in Gombe, Kinshasa.",
-    images: ["/hero-boulevard.png"],
+    images: ["/og.jpg"],
   },
 };
 
@@ -71,32 +75,43 @@ const restaurantSchema = {
   description:
     "Premium healthy lifestyle restaurant in Gombe, Kinshasa — fresh food, signature drinks, artisan bakery and community.",
   url: "https://pioppi.cafe",
-  image: "https://pioppi.cafe/hero-boulevard.png",
+  image: "https://pioppi.cafe/og.jpg",
+  hasMenu: "https://pioppi.cafe/menu.pdf",
+  slogan: "Paradis de santé",
+  telephone: "+243900004445",
+  sameAs: [
+    "https://www.instagram.com/pioppi.drc/",
+    "https://www.facebook.com/profile.php?id=61591542536572",
+    "https://www.tiktok.com/@pioppi60",
+  ],
   servesCuisine: ["Healthy", "Breakfast", "Salads", "Coffee & Matcha"],
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Gombe, Kinshasa",
+    streetAddress:
+      "2ᵉ étage, Immeuble Matrix (LC Waikiki), 119 Boulevard du 30 Juin, Gombe",
+    addressLocality: "Kinshasa",
     addressCountry: "CD",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -4.3094,
+    longitude: 15.29167,
   },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "07:30",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "09:30",
       closes: "22:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "08:00",
-      closes: "23:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Sunday",
-      opens: "09:00",
-      closes: "21:00",
     },
   ],
 };
